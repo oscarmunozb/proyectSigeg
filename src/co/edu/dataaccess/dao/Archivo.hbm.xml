@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="co.edu.dataaccess.dao.Archivo" table="Archivo" catalog="SIGEG" optimistic-lock="version">
+
+		<id name="idArchivo" type="java.lang.Long">
+			<column name="IdArchivo" />
+			<generator class="identity" />
+		</id>
+		<property name="nombre" type="java.lang.String">
+			<column name="Nombre" length="200" not-null="true" />
+		</property>
+		<property name="extension" type="java.lang.String">
+			<column name="Extension" length="5" not-null="true" />
+		</property>
+		<property name="ruta" type="java.lang.String">
+			<column name="Ruta" length="100" not-null="true" />
+		</property>
+		<property name="fechaCreacion" type="java.sql.Date">
+			<column name="FechaCreacion" not-null="true" />
+		</property>
+
+	</class>
+</hibernate-mapping>

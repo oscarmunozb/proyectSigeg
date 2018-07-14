@@ -1,0 +1,352 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="co.edu.dataaccess.dao.InformacionEncuesta" table="InformacionEncuesta" catalog="SIGEG" optimistic-lock="version">
+
+		<id name="idInformacionEncuesta" type="java.lang.Long">
+			<column name="IdInformacionEncuesta" />
+			<generator class="identity" />
+		</id>
+		<property name="idEgresado" type="java.lang.Long">
+			<column name="IdEgresado" length="10" not-null="false" />
+		</property>
+		<property name="fechaUltimaEncuesta" type="java.sql.Date">
+			<column name="FechaUltimaEncuesta" not-null="true" />
+		</property>
+		<property name="fechaNacimiento" type="java.sql.Date">
+			<column name="FechaNacimiento" not-null="true" />
+		</property>
+		<property name="paisNacimiento" type="java.lang.String">
+			<column name="PaisNacimiento" length="45" not-null="true" />
+		</property>
+		<property name="estadoCivil" type="java.lang.String">
+			<column name="EstadoCivil" length="45" not-null="true" />
+		</property>
+		<property name="numeroHijos" type="java.lang.String">
+			<column name="NumeroHijos" length="45" not-null="true" />
+		</property>
+		<property name="tipoVivienda" type="java.lang.String">
+			<column name="TipoVivienda" length="45" not-null="true" />
+		</property>
+		<property name="nivelEduPadre" type="java.lang.String">
+			<column name="NivelEduPadre" length="45" not-null="true" />
+		</property>
+		<property name="ocupacionPadre" type="java.lang.String">
+			<column name="OcupacionPadre" length="45" not-null="true" />
+		</property>
+		<property name="raza" type="java.lang.String">
+			<column name="Raza" length="45" not-null="true" />
+		</property>
+		<property name="nivelEduMadre" type="java.lang.String">
+			<column name="NivelEduMadre" length="45" not-null="true" />
+		</property>
+		<property name="ocupacionMadre" type="java.lang.String">
+			<column name="OcupacionMadre" length="45" not-null="true" />
+		</property>
+		<property name="limitacionPermanente" type="java.lang.String">
+			<column name="LimitacionPermanente" length="2" not-null="true" />
+		</property>
+		<property name="limitacionAfecta" type="java.lang.String">
+			<column name="LimitacionAfecta" length="500" not-null="true" />
+		</property>
+		<property name="limitacionMasAfecta" type="java.lang.String">
+			<column name="LimitacionMasAfecta" length="80" not-null="true" />
+		</property>
+		<property name="tiempoAntesDeUniversidad" type="java.lang.String">
+			<column name="TiempoAntesDeUniversidad" length="45" not-null="true" />
+		</property>
+		<property name="factorCarrera" type="java.lang.String">
+			<column name="FactorCarrera" length="100" not-null="true" />
+		</property>
+		<property name="recursosCarrera" type="java.lang.String">
+			<column name="RecursosCarrera" length="45" not-null="true" />
+		</property>
+		<property name="entidadCredito" type="java.lang.String">
+			<column name="EntidadCredito" length="45" not-null="true" />
+		</property>
+		<property name="bachilleratoBilingue" type="java.lang.String">
+			<column name="BachilleratoBilingue" length="2" not-null="true" />
+		</property>
+		<property name="unijacAyudoIdioma" type="java.lang.String">
+			<column name="UnijacAyudoIdioma" length="2" not-null="true" />
+		</property>
+		<property name="idiomaExtranjeroDomina" type="java.lang.String">
+			<column name="IdiomaExtranjeroDomina" length="45" not-null="true" />
+		</property>
+		<property name="hablaIdioma" type="java.lang.String">
+			<column name="HablaIdioma" length="45" not-null="true" />
+		</property>
+		<property name="escuchaIdioma" type="java.lang.String">
+			<column name="EscuchaIdioma" length="45" not-null="true" />
+		</property>
+		<property name="lecturaIdioma" type="java.lang.String">
+			<column name="LecturaIdioma" length="45" not-null="true" />
+		</property>
+		<property name="escrituraIdioma" type="java.lang.String">
+			<column name="EscrituraIdioma" length="45" not-null="true" />
+		</property>
+		<property name="competenciaEscritura" type="java.lang.String">
+			<column name="CompetenciaEscritura" length="45" not-null="true" />
+		</property>
+		<property name="competenciaOral" type="java.lang.String">
+			<column name="CompetenciaOral" length="45" not-null="true" />
+		</property>
+		<property name="competenciaPersuacion" type="java.lang.String">
+			<column name="CompetenciaPersuacion" length="45" not-null="true" />
+		</property>
+		<property name="competenciaNoVerbal" type="java.lang.String">
+			<column name="CompetenciaNoVerbal" length="45" not-null="true" />
+		</property>
+		<property name="competenciaMulticultural" type="java.lang.String">
+			<column name="CompetenciaMulticultural" length="45" not-null="true" />
+		</property>
+		<property name="competenciaHerramientasBasicas" type="java.lang.String">
+			<column name="CompetenciaHerramientasBasicas" length="45" not-null="true" />
+		</property>
+		<property name="competenciaAutoAprendizaje" type="java.lang.String">
+			<column name="CompetenciaAutoAprendizaje" length="45" not-null="true" />
+		</property>
+		<property name="competenciaInnovacion" type="java.lang.String">
+			<column name="CompetenciaInnovacion" length="45" not-null="true" />
+		</property>
+		<property name="competenciaInformacion" type="java.lang.String">
+			<column name="CompetenciaInformacion" length="45" not-null="true" />
+		</property>
+		<property name="competenciaTecnologia" type="java.lang.String">
+			<column name="CompetenciaTecnologia" length="45" not-null="true" />
+		</property>
+		<property name="competenciaSoluciones" type="java.lang.String">
+			<column name="CompetenciaSoluciones" length="45" not-null="true" />
+		</property>
+		<property name="competenciaProblemas" type="java.lang.String">
+			<column name="CompetenciaProblemas" length="45" not-null="true" />
+		</property>
+		<property name="competenciaAnalisis" type="java.lang.String">
+			<column name="CompetenciaAnalisis" length="45" not-null="true" />
+		</property>
+		<property name="competenciaRealidad" type="java.lang.String">
+			<column name="CompetenciaRealidad" length="45" not-null="true" />
+		</property>
+		<property name="competenciaCultura" type="java.lang.String">
+			<column name="CompetenciaCultura" length="45" not-null="true" />
+		</property>
+		<property name="competenciaResponsabilidad" type="java.lang.String">
+			<column name="CompetenciaResponsabilidad" length="45" not-null="true" />
+		</property>
+		<property name="competenciaPlanificar" type="java.lang.String">
+			<column name="CompetenciaPlanificar" length="45" not-null="true" />
+		</property>
+		<property name="competenciaHerramientasEsp" type="java.lang.String">
+			<column name="CompetenciaHerramientasEsp" length="45" not-null="true" />
+		</property>
+		<property name="competenciaProyectos" type="java.lang.String">
+			<column name="CompetenciaProyectos" length="45" not-null="true" />
+		</property>
+		<property name="competenciaTrabEquipo" type="java.lang.String">
+			<column name="CompetenciaTrabEquipo" length="45" not-null="true" />
+		</property>
+		<property name="competenciaTrabIndependiente" type="java.lang.String">
+			<column name="CompetenciaTrabIndependiente" length="45" not-null="true" />
+		</property>
+		<property name="competenciaEtica" type="java.lang.String">
+			<column name="CompetenciaEtica" length="45" not-null="true" />
+		</property>
+		<property name="competenciaCambios" type="java.lang.String">
+			<column name="CompetenciaCambios" length="45" not-null="true" />
+		</property>
+		<property name="competenciaPresion" type="java.lang.String">
+			<column name="CompetenciaPresion" length="45" not-null="true" />
+		</property>
+		<property name="competenciaDebilUniajc" type="java.lang.String">
+			<column name="CompetenciaDebilUniajc" length="200" not-null="true" />
+		</property>
+		<property name="competenciaFuerteUniacj" type="java.lang.String">
+			<column name="CompetenciaFuerteUniacj" length="200" not-null="true" />
+		</property>
+		<property name="competenciaMenosUtil" type="java.lang.String">
+			<column name="CompetenciaMenosUtil" length="200" not-null="true" />
+		</property>
+		<property name="competenciaMasUtil" type="java.lang.String">
+			<column name="CompetenciaMasUtil" length="200" not-null="true" />
+		</property>
+		<property name="largoPlazo" type="java.lang.String">
+			<column name="LargoPlazo" length="45" not-null="true" />
+		</property>
+		<property name="actividad" type="java.lang.String">
+			<column name="Actividad" length="45" not-null="true" />
+		</property>
+		<property name="vinculacionLaboral" type="java.lang.String">
+			<column name="VinculacionLaboral" length="45" not-null="true" />
+		</property>
+		<property name="primerTrabajo" type="java.lang.String">
+			<column name="PrimerTrabajo" length="45" not-null="true" />
+		</property>
+		<property name="coberturaEmpresa" type="java.lang.String">
+			<column name="CoberturaEmpresa" length="45" not-null="true" />
+		</property>
+		<property name="interesEmprender" type="java.lang.String">
+			<column name="InteresEmprender" length="45" not-null="true" />
+		</property>
+		<property name="dificultadEmprender" type="java.lang.String">
+			<column name="DificultadEmprender" length="200" not-null="true" />
+		</property>
+		<property name="relacionCarreraTrabajo" type="java.lang.String">
+			<column name="RelacionCarreraTrabajo" length="45" not-null="true" />
+		</property>
+		<property name="actEconomicaEmpresa" type="java.lang.String">
+			<column name="ActEconomicaEmpresa" length="45" not-null="true" />
+		</property>
+		<property name="situacionExpectativas" type="java.lang.String">
+			<column name="SituacionExpectativas" length="45" not-null="true" />
+		</property>
+		<property name="utilidadCarreraTrabajo" type="java.lang.String">
+			<column name="UtilidadCarreraTrabajo" length="45" not-null="true" />
+		</property>
+		<property name="utilidadCarreraVida" type="java.lang.String">
+			<column name="UtilidadCarreraVida" length="45" not-null="true" />
+		</property>
+		<property name="nombreEmpresa" type="java.lang.String">
+			<column name="NombreEmpresa" length="45" not-null="true" />
+		</property>
+		<property name="cargoEmpresa" type="java.lang.String">
+			<column name="CargoEmpresa" length="45" not-null="true" />
+		</property>
+		<property name="trabajoContribuyeDesarrollo" type="java.lang.String">
+			<column name="TrabajoContribuyeDesarrollo" length="2" not-null="true" />
+		</property>
+		<property name="carreraProductividadTrabajo" type="java.lang.String">
+			<column name="CarreraProductividadTrabajo" length="2" not-null="true" />
+		</property>
+		<property name="satisfaccionTrabajo" type="java.lang.String">
+			<column name="SatisfaccionTrabajo" length="45" not-null="true" />
+		</property>
+		<property name="caracterizacionDesempleado" type="java.lang.String">
+			<column name="CaracterizacionDesempleado" length="45" not-null="true" />
+		</property>
+		<property name="mesesBuscandoTrabajo" type="java.lang.String">
+			<column name="MesesBuscandoTrabajo" length="45" not-null="true" />
+		</property>
+		<property name="sentidoPertenencia" type="java.lang.String">
+			<column name="SentidoPertenencia" length="45" not-null="true" />
+		</property>
+		<property name="posibilidadesLaborales" type="java.lang.String">
+			<column name="PosibilidadesLaborales" length="45" not-null="true" />
+		</property>
+		<property name="mismaCarrera" type="java.lang.String">
+			<column name="MismaCarrera" length="2" not-null="true" />
+		</property>
+		<property name="razonMismaCarrera" type="java.lang.String">
+			<column name="RazonMismaCarrera" length="100" not-null="true" />
+		</property>
+		<property name="razonNoMismaCarrera" type="java.lang.String">
+			<column name="RazonNoMismaCarrera" length="100" not-null="true" />
+		</property>
+		<property name="otrosEstudios" type="java.lang.String">
+			<column name="OtrosEstudios" length="45" not-null="true" />
+		</property>
+		<property name="recomiendaPrograma" type="java.lang.String">
+			<column name="RecomiendaPrograma" length="2" not-null="true" />
+		</property>
+		<property name="persDocenteRelaciones" type="java.lang.String">
+			<column name="PersDocenteRelaciones" length="45" not-null="true" />
+		</property>
+		<property name="persDocenteFormacionExp" type="java.lang.String">
+			<column name="PersDocenteFormacionExp" length="45" not-null="true" />
+		</property>
+		<property name="persDocenteFundTeorica" type="java.lang.String">
+			<column name="PersDocenteFundTeorica" length="45" not-null="true" />
+		</property>
+		<property name="persDocenteDispTiempo" type="java.lang.String">
+			<column name="PersDocenteDispTiempo" length="45" not-null="true" />
+		</property>
+		<property name="persDocenteFacilidadEnsenar" type="java.lang.String">
+			<column name="PersDocenteFacilidadEnsenar" length="45" not-null="true" />
+		</property>
+		<property name="persDocenteTrabajoCampo" type="java.lang.String">
+			<column name="PersDocenteTrabajoCampo" length="45" not-null="true" />
+		</property>
+		<property name="persDocenteComunicacionEst" type="java.lang.String">
+			<column name="PersDocenteComunicacionEst" length="45" not-null="true" />
+		</property>
+		<property name="persDocenteExigenciaAcade" type="java.lang.String">
+			<column name="PersDocenteExigenciaAcade" length="45" not-null="true" />
+		</property>
+		<property name="apoyoEstIntercambios" type="java.lang.String">
+			<column name="ApoyoEstIntercambios" length="45" not-null="true" />
+		</property>
+		<property name="apoyoEstPracticasEmpr" type="java.lang.String">
+			<column name="ApoyoEstPracticasEmpr" length="45" not-null="true" />
+		</property>
+		<property name="apoyoEstOportunidadesEmpleo" type="java.lang.String">
+			<column name="ApoyoEstOportunidadesEmpleo" length="45" not-null="true" />
+		</property>
+		<property name="apoyoEstDesarrolloInvestigacion" type="java.lang.String">
+			<column name="ApoyoEstDesarrolloInvestigacion" length="45" not-null="true" />
+		</property>
+		<property name="apoyoEstEventosActualizacion" type="java.lang.String">
+			<column name="ApoyoEstEventosActualizacion" length="45" not-null="true" />
+		</property>
+		<property name="apoyoEstAsistenciaMedica" type="java.lang.String">
+			<column name="ApoyoEstAsistenciaMedica" length="45" not-null="true" />
+		</property>
+		<property name="apoyoEstActividadesLudicas" type="java.lang.String">
+			<column name="ApoyoEstActividadesLudicas" length="45" not-null="true" />
+		</property>
+		<property name="gestionAdminTramites" type="java.lang.String">
+			<column name="GestionAdminTramites" length="45" not-null="true" />
+		</property>
+		<property name="gestionAdminAtencion" type="java.lang.String">
+			<column name="GestionAdminAtencion" length="45" not-null="true" />
+		</property>
+		<property name="recFisicosSalones" type="java.lang.String">
+			<column name="RecFisicosSalones" length="45" not-null="true" />
+		</property>
+		<property name="recFisicosLaboratorios" type="java.lang.String">
+			<column name="RecFisicosLaboratorios" length="45" not-null="true" />
+		</property>
+		<property name="recFisicosEspacios" type="java.lang.String">
+			<column name="RecFisicosEspacios" length="45" not-null="true" />
+		</property>
+		<property name="recFisicosAudiovisuales" type="java.lang.String">
+			<column name="RecFisicosAudiovisuales" length="45" not-null="true" />
+		</property>
+		<property name="recFisicosSalasSistemas" type="java.lang.String">
+			<column name="RecFisicosSalasSistemas" length="45" not-null="true" />
+		</property>
+		<property name="recFisicosDeportes" type="java.lang.String">
+			<column name="RecFisicosDeportes" length="45" not-null="true" />
+		</property>
+		<property name="recFisicosCulturales" type="java.lang.String">
+			<column name="RecFisicosCulturales" length="45" not-null="true" />
+		</property>
+		<property name="recFisicosBiblioteca" type="java.lang.String">
+			<column name="RecFisicosBiblioteca" length="45" not-null="true" />
+		</property>
+		<property name="recFisicosMediosComunicacion" type="java.lang.String">
+			<column name="RecFisicosMediosComunicacion" length="45" not-null="true" />
+		</property>
+		<property name="proyectoProductoDivulgar" type="java.lang.String">
+			<column name="ProyectoProductoDivulgar" length="2" not-null="true" />
+		</property>
+		<property name="estudiosPostGradoOtraUniversidad" type="java.lang.String">
+			<column name="EstudiosPostGradoOtraUniversidad" length="2" not-null="true" />
+		</property>
+		<property name="reconocimientoLaboral" type="java.lang.String">
+			<column name="ReconocimientoLaboral" length="2" not-null="true" />
+		</property>
+		<property name="grupoInvestigacion" type="java.lang.String">
+			<column name="GrupoInvestigacion" length="2" not-null="true" />
+		</property>
+		<property name="observacionesProgramaEgresados" type="java.lang.String">
+			<column name="ObservacionesProgramaEgresados" length="4000" not-null="true" />
+		</property>
+		<property name="compartirEstudiantesUniajc" type="java.lang.String">
+			<column name="CompartirEstudiantesUniajc" length="2" not-null="true" />
+		</property>
+		<property name="sugerenciasProgramaAcademico" type="java.lang.String">
+			<column name="SugerenciasProgramaAcademico" length="4000" not-null="true" />
+		</property>
+
+	</class>
+</hibernate-mapping>
